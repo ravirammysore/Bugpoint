@@ -1,0 +1,57 @@
+Install Dotnet 5.0 from here
+-----------------
+https://dotnet.microsoft.com/en-us/download/dotnet/5.0
+
+Create database using the script inside the data project folder
+-----------------
+
+The run the below commands to facilitate login
+-----------------
+
+https://10015.io/tools/sha256-encrypt-decrypt
+
+UPDATE [UserMaster]  SET   
+PasswordHash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'
+
+UPDATE [UserMaster]  SET 
+Status = 1
+
+Login to AdminUser
+---------------------------
+AdminUser
+123456
+
+
+Step 1 (From AdminUser)
+-----------------
+Create Users with given Roles
+
+Step 2 (From SuperAdmin)
+-----------------
+1. Logging into SuperAdmin Account
+2. Configure SMTP
+ 
+Step 3 (From AdminUser)
+-----------------
+1. Add Project
+
+Step 4 (From AdminUser)
+------------------
+2. Assign Project (Developer,Tester,Developer Team Lead ,Tester Team Lead, Project Manager)
+Search project Name 
+Select Role
+Search User
+
+Example :- Create Developer , Developer Team Lead , Tester , Tester Team Lead.
+
+Step 5 (From Developer Team Lead)
+-----------------------------
+Adding Component
+Assiging Component to Developer
+
+Step 6 (From Tester)
+-----------------------------
+1. Creating Bugs
+2. Assign Bugs to Developer
+
+
