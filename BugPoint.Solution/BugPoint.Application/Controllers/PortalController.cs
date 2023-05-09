@@ -71,12 +71,12 @@ namespace BugPoint.Application.Controllers
 
             if (ModelState.IsValid)
             {
-                if (!_validatorService.HasRequestValidCaptchaEntry(Language.English, DisplayMode.ShowDigits))
+               /* if (!_validatorService.HasRequestValidCaptchaEntry(Language.English, DisplayMode.ShowDigits))
                 {
                     TempData["LoginErrorMessage"] = "Please enter valid security code";
                     return RedirectToAction("Login");
-                }
-                else if (!_userMasterQueries.CheckUsernameExists(loginViewModel.Username))
+                }*/
+                if (!_userMasterQueries.CheckUsernameExists(loginViewModel.Username))
                 {
                     _logger.LogError($"CheckUsernameExists :- {loginViewModel.Username}");
                     TempData["LoginErrorMessage"] = "Entered Username or Password is Invalid";
