@@ -1,12 +1,8 @@
 ﻿USE [master]
 GO
 
-CREATE DATABASE [BugPointDB] ON PRIMARY 
-( NAME = N'BugPointDB', FILENAME = 'C:\Users\ravi_\Documents\BugPointDB\BugPointDB.mdf', SIZE = 73728KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
-LOG ON 
-( NAME = N'BugPointDB_log', FILENAME = 'C:\Users\ravi_\Documents\BugPointDB\BugPointDB_log.ldf', SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+CREATE DATABASE [BugPointDB]
 GO
-
 
 
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
@@ -1333,6 +1329,15 @@ INSERT [dbo].[UserMaster] ([UserId], [UserName], [FirstName], [LastName], [Email
 INSERT [dbo].[UserMaster] ([UserId], [UserName], [FirstName], [LastName], [EmailId], [MobileNo], [Gender], [Status], [IsFirstLogin], [CreatedOn], [ModifiedOn], [IsFirstLoginDate], [PasswordHash], [CreatedBy], [ModifiedBy], [DesignationId]) VALUES (7, N'ProjectManager', N'ProjectManager', N'ProjectManager', N'saineshwarbageri@outlook.com', N'9855777777', N'M', 0, 0, CAST(N'2021-08-28T15:22:44.547' AS DateTime), NULL, CAST(N'2021-08-28T15:22:44.343' AS DateTime), N'f4915b1d2abce6a503cdfd8d035ee04b8493e79e83e8d9764b0892044836d668', 1, NULL, 6)
 SET IDENTITY_INSERT [dbo].[UserMaster] OFF
 GO
+
+UPDATE [UserMaster]  SET   
+PasswordHash = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'
+GO
+
+UPDATE [UserMaster]  SET 
+Status = 1
+GO
+
 SET IDENTITY_INSERT [dbo].[Version] ON 
 
 INSERT [dbo].[Version] ([VersionId], [VersionName], [Code]) VALUES (1, N'UnSpecified', 1)
