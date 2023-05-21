@@ -43,4 +43,5 @@ Step 6 (From Tester)
 1. Creating Bugs
 2. Assign Bugs to Developer
 
-
+Documentation by author
+https://tutexchange.com/quick-view-at-reporter-features-of-bugpoint-application/
